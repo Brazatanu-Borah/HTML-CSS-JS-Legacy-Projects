@@ -1,0 +1,20 @@
+# ====================================================================
+# 🏛️ LEGACY LAYOUT PROJECTS .GITIGNORE
+# Only the absolute essentials to keep my legacy repository clean and organized!
+# ====================================================================
+
+# 1. MY CODE EDITOR SETTINGS
+# Hides my personal VS Code window settings and layouts from other users.
+.vscode/
+.idea/
+*.swp
+
+# 2. COMPUTER SYSTEM JUNK FILES
+# Trash files automatically created by Mac (Finder) or Windows. 
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 3. SECRET KEYS & CONFIGS (Just in case!)
+# If I practice handling configurations or system parameters in the future.
+.env
