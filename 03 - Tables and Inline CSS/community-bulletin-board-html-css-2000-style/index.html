@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Community Bulletin Board</title>
+  </head>
+
+
+  <!-- 📚 STUDY NOTE: This is deliberately built with tables and inline CSS to practice the look and constraints of older forum pages. -->
+
+
+  <body bgcolor="#e8e8e4" style="
+    /* 🎨 CSS CHOICE: Keep the page fixed and compact like an older forum. */
+  margin:0;padding:24px;font-family:Verdana,Geneva,Arial,sans-serif;font-size:13px;color:#333333;">
+
+    <!-- =================== TART: Main Forum Layout =================== -->
+
+    <table width="960" cellpadding="0" cellspacing="0" align="center" style="
+    /* 🎨 CSS CHOICE: A plain border and light background keep the forum frame simple. */
+    border:2px solid #888888;background-color:#fcfcfb;">
+
+      <!-- =================== START: Forum Header =================== -->
+      <tr>
+        <td style="
+        /* 🎨 CSS CHOICE: Use a solid blue header instead of gradients or newer effects. */
+        background-color:#2c5f8a;padding:16px 22px;border-bottom:3px solid #1a4060;">
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="color:#ffffff;font-size:26px;font-weight:bold;letter-spacing:-0.5px;">
+                📋 COMMUNITY BULLETIN BOARD
+              </td>
+              <td align="right" style="color:#aaccee;font-size:12px;">
+                Welcome back, <span style="color:#ffffff;font-weight:bold;">Member</span>
+                &nbsp;&middot;&nbsp;
+                <span style="color:#aaccee;">Last visit: Today</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- =================== END: Forum Header =================== -->
+
+      <!-- =================== START: Main Content =================== -->
+      <tr>
+
+        <!-- =================== START: User Sidebar =================== -->
+        <td>
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="260" style="padding:18px 16px 16px 18px;vertical-align:top;border-right:2px solid #cccccc;background-color:#f4f6f8;">
+                
+                <!-- 🧿 TAG CHOICE: Using <table> for the user card because i,m trying to recreate  a classic table-based forum layout. -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #bbbbbb;background-color:#ffffff;">
+                  <tr>
+                    <td align="center" style="padding:16px 0 8px 0;">
+                      <span style="font-weight:bold;color:#1a4060;font-size:14px;">Member</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-size:11px;color:#666666;padding-bottom:12px;">
+                      <span style="color:#2a7a2a;">● Online</span>
+                    </td>
+                  </tr>
+                </table>
+
+
+                <!-- 🎨 CSS NOTE: This divider uses a simple border instead of an image or decorative asset. -->
+                <div style="border-top:1px solid #dddddd;margin:4px 0 10px 0;"></div>
+
+
+                <!-- 🧿 TAG CHOICE: Using <table> for user statistics because the labels and values form a small data table. -->
+                <table width="100%" cellpadding="2" cellspacing="0" style="font-size:12px;">
+                  <tr>
+                    <td style="color:#666666;width:60px;">Posts:</td>
+                    <td style="font-weight:bold;color:#1a4060;">1,247</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#666666;">Joined:</td>
+                    <td style="font-weight:bold;color:#1a4060;">Jan 2005</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#666666;">Location:</td>
+                    <td style="font-weight:bold;color:#1a4060;">Web City</td>
+                  </tr>
+                  <tr>
+                    <td style="color:#666666;">Reputation:</td>
+                    <td style="font-weight:bold;color:#1a4060;">★★★★☆</td>
+                  </tr>
+                </table>
+
+
+                <!-- 🎨 CSS NOTE: This divider uses a simple border instead of an image or decorative asset. -->
+                <div style="border-top:1px solid #dddddd;margin:10px 0 8px 0;"></div>
+
+                <table width="100%" cellpadding="2" cellspacing="0" style="font-size:11px;color:#555555;">
+                  <tr>
+                    <td style="padding-right:8px;">📌 Topics:</td>
+                    <td style="font-weight:bold;">42</td>
+                    <td style="padding-left:12px;padding-right:8px;">💬 Replies:</td>
+                    <td style="font-weight:bold;">1,205</td>
+                  </tr>
+                </table>
+
+
+                <!-- 🎨 CSS NOTE: Kept this small spacer because the original fixed-width layout relies on simple vertical gaps. -->
+                <div style="height:12px;"></div>
+
+
+                <!-- 🧿 TAG CHOICE: Using <table> for the forum summary because the layout follows the same old-school forum pattern. -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #cccccc;background-color:#fafafa;">
+                  <tr>
+                    <td style="padding:10px 14px;font-size:11px;color:#555555;">
+                      <span style="font-weight:bold;color:#2c5f8a;">📊 Forum Stats</span><br>
+                      Total Members: <strong>3,842</strong> &middot;
+                      Total Posts: <strong>28,591</strong><br>
+                      Newest Member: <span style="color:#2c5f8a;">@WebDev_88</span>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+
+              <!-- =================== START: Thread List =================== -->
+              <td style="padding:18px 20px 16px 20px;vertical-align:top;">
+
+                <!-- 🧿 TAG CHOICE: Using a table roe for the section heading because the title and sort label sit on opposite sides. -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:12px;">
+                  <tr>
+                    <td style="font-size:18px;font-weight:bold;color:#1a4060;letter-spacing:-0.3px;">
+                      Recent Discussions
+                    </td>
+                    <td align="right" style="font-size:11px;color:#777777;">
+                      <span style="color:#2c5f8a;font-weight:bold;">▼</span> Newest first
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- =================== START: Discussion Threads =================== -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #cccccc;">
+
+                  <!-- =================== START: Thread 1 =================== -->
+                  <tr>
+                    <td style="padding:12px 14px;border-bottom:1px solid #e0e0e0;background-color:#fafafa;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="#" style="font-weight:bold;color:#1a4060;font-size:14px;text-decoration:none;">▶ Welcome to the Community</a>
+                            <div style="font-size:11px;color:#777777;margin-top:2px;">
+                              by <span style="color:#2c5f8a;">Admin</span>
+                              &middot; <span style="font-weight:bold;">12</span> replies
+                              &middot; Last post: <span style="color:#555555;">2 hours ago</span>
+                            </div>
+                          </td>
+                          <td align="right" style="font-size:11px;color:#888888;white-space:nowrap;padding-left:12px;">
+                            <span style="background-color:#e8edf2;padding:2px 8px;border:1px solid #cccccc;">Announcement</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- =================== START: Thread 2 =================== -->
+                  <tr>
+                    <td style="padding:12px 14px;border-bottom:1px solid #e0e0e0;background-color:#ffffff;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="#" style="font-weight:bold;color:#1a4060;font-size:14px;text-decoration:none;">▶ Help with CSS Layout</a>
+                            <div style="font-size:11px;color:#777777;margin-top:2px;">
+                              by <span style="color:#2c5f8a;">NewUser</span>
+                              &middot; <span style="font-weight:bold;">5</span> replies
+                              &middot; Last post: <span style="color:#555555;">5 hours ago</span>
+                            </div>
+                          </td>
+                          <td align="right" style="font-size:11px;color:#888888;white-space:nowrap;padding-left:12px;">
+                            <span style="background-color:#e8edf2;padding:2px 8px;border:1px solid #cccccc;">Question</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- =================== START: Thread 3 =================== -->
+                  <tr>
+                    <td style="padding:12px 14px;border-bottom:1px solid #e0e0e0;background-color:#fafafa;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="#" style="font-weight:bold;color:#1a4060;font-size:14px;text-decoration:none;">▶ New Features Coming Soon</a>
+                            <div style="font-size:11px;color:#777777;margin-top:2px;">
+                              by <span style="color:#2c5f8a;">Moderator</span>
+                              &middot; <span style="font-weight:bold;">3</span> replies
+                              &middot; Last post: <span style="color:#555555;">1 day ago</span>
+                            </div>
+                          </td>
+                          <td align="right" style="font-size:11px;color:#888888;white-space:nowrap;padding-left:12px;">
+                            <span style="background-color:#e8edf2;padding:2px 8px;border:1px solid #cccccc;">News</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- =================== START: Thread 4 =================== -->
+                  <tr>
+                    <td style="padding:12px 14px;border-bottom:1px solid #e0e0e0;background-color:#ffffff;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="#" style="font-weight:bold;color:#1a4060;font-size:14px;text-decoration:none;">▶ Introduce Yourself Here</a>
+                            <div style="font-size:11px;color:#777777;margin-top:2px;">
+                              by <span style="color:#2c5f8a;">Member</span>
+                              &middot; <span style="font-weight:bold;">8</span> replies
+                              &middot; Last post: <span style="color:#555555;">3 days ago</span>
+                            </div>
+                          </td>
+                          <td align="right" style="font-size:11px;color:#888888;white-space:nowrap;padding-left:12px;">
+                            <span style="background-color:#e8edf2;padding:2px 8px;border:1px solid #cccccc;">Intro</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- =================== START: Thread 5 =================== -->
+                  <tr>
+                    <td style="padding:12px 14px;border-bottom:1px solid #e0e0e0;background-color:#fafafa;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="#" style="font-weight:bold;color:#1a4060;font-size:14px;text-decoration:none;">▶ Forum Guidelines &amp; Rules</a>
+                            <div style="font-size:11px;color:#777777;margin-top:2px;">
+                              by <span style="color:#2c5f8a;">Admin</span>
+                              &middot; <span style="font-weight:bold;">0</span> replies
+                              &middot; Last post: <span style="color:#555555;">5 days ago</span>
+                            </div>
+                          </td>
+                          <td align="right" style="font-size:11px;color:#888888;white-space:nowrap;padding-left:12px;">
+                            <span style="background-color:#e8edf2;padding:2px 8px;border:1px solid #cccccc;">Sticky</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- =================== START: Thread 6 =================== -->
+                  <tr>
+                    <td style="padding:12px 14px;background-color:#ffffff;">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td>
+                            <a href="#" style="font-weight:bold;color:#1a4060;font-size:14px;text-decoration:none;">▶ Show Off Your Projects</a>
+                            <div style="font-size:11px;color:#777777;margin-top:2px;">
+                              by <span style="color:#2c5f8a;">Designer</span>
+                              &middot; <span style="font-weight:bold;">15</span> replies
+                              &middot; Last post: <span style="color:#555555;">6 days ago</span>
+                            </div>
+                          </td>
+                          <td align="right" style="font-size:11px;color:#888888;white-space:nowrap;padding-left:12px;">
+                            <span style="background-color:#e8edf2;padding:2px 8px;border:1px solid #cccccc;">Showcase</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                </table>
+
+                <!-- =================== START: Pagination =================== -->
+                <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;">
+                  <tr>
+                    <td style="font-size:12px;color:#888888;">
+                      Showing 1–6 of 42 topics
+                    </td>
+                    <td align="right" style="font-size:12px;">
+                      <a href="#" style="padding:3px 10px;border:1px solid #cccccc;background-color:#f0f0f0;color:#333333;font-weight:bold;text-decoration:none;">1</a>
+                      <a href="#" style="padding:3px 10px;border:1px solid #cccccc;background-color:#ffffff;color:#2c5f8a;text-decoration:none;">2</a>
+                      <a href="#" style="padding:3px 10px;border:1px solid #cccccc;background-color:#ffffff;color:#2c5f8a;text-decoration:none;">3</a>
+                      <a href="#" style="padding:3px 10px;border:1px solid #cccccc;background-color:#ffffff;color:#2c5f8a;text-decoration:none;">…</a>
+                      <a href="#" style="padding:3px 10px;border:1px solid #cccccc;background-color:#ffffff;color:#2c5f8a;text-decoration:none;">7</a>
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- =================== START: Footer =================== -->
+      <tr>
+        <td align="center" style="background-color:#2c5f8a;color:#ffffff;font-size:11px;padding:12px;border-top:3px solid #1a4060;">
+          &copy; 2006 Community Bulletin Board &middot;
+          All rights reserved &middot;
+          <span style="color:#aaccee;">Powered by <span style="font-weight:bold;color:#ffffff;">Forum</span> v2.0</span>
+          &middot;
+          <span style="color:#aaccee;">🕐 Server time: 14:23 UTC</span>
+        </td>
+      </tr>
+
+    </table>
+    <!-- =================== END: Main Forum Layout ===================== -->
+
+
+
+  </body>
+
+</html>
