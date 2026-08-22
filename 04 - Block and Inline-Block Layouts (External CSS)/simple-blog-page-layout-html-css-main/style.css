@@ -1,0 +1,124 @@
+/* ============================================================================
+ ?? SECTION: Global Reset
+ ============================================================================ */
+
+/* ?? PROPERTY CHOICE: Using margin: 0 because it removes default browser spacing for a clean baseline. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================================
+ ?? SECTION: Base Typography and Body Styles
+ ============================================================================ */
+
+body {
+  /* ?? PROPERTY CHOICE: Using font-family: "Plus Jakarta Sans", sans-serif because it provides a modern, legible sans-serif font for body text. */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  background-color: #f2f2f2;
+  color: #2c3e50;
+}
+
+/* ============================================================================
+ ?? SECTION: Headings Typography
+ ============================================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* ?? PROPERTY CHOICE: Using font-family: "Spectral", serif because it applies an elegant serif font to all headings. */
+  font-family: "Spectral", serif;
+}
+
+h1 {
+  font-size: 2.6em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+/* ============================================================================
+ ?? SECTION: Header Styles
+ ============================================================================ */
+
+header {
+  /* ?? PROPERTY CHOICE: Using text-align: center because it centers the site title for a minimalist aesthetic. */
+  text-align: center;
+  background-color: #fff;
+  color: #023763;
+  padding: 15px;
+}
+
+/* ============================================================================
+ ?? SECTION: Layout Container and Articles
+ ============================================================================ */
+
+#main-container {
+  /* ?? PROPERTY CHOICE: Using max-width: 768px because it restricts line lengths for optimal reading comfort. */
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+article {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+article p {
+  margin: 0 0 1em;
+}
+
+/* ============================================================================
+ ?? SECTION: Blockquotes and Custom Components
+ ============================================================================ */
+
+.quote {
+  /* ?? PROPERTY CHOICE: Using border-left: solid 5px #bdc3c7 because it adds a classic vertical accent line for quotes. */
+  border-left: solid 5px #bdc3c7;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* ============================================================================
+ ?? SECTION: Post Metadata and Footers
+ ============================================================================ */
+
+section.post-head small {
+  /* ?? PROPERTY CHOICE: Using display: block because it forces the date metadata onto its own line below the heading. */
+  display: block;
+  margin: 0 0 20px;
+  margin-top: 10px;
+  padding: 0 0 20px;
+  border-bottom: solid 1px #eee;
+  color: #00c6a0;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+section.post-body a {
+  color: #00c6a0;
+  font-weight: 400;
+}
+
+section.post-foot {
+  /* ?? PROPERTY CHOICE: Using font-size: 14px because it slightly scales down footer metadata text for visual hierarchy. */
+  font-size: 14px;
+  border-top: solid 1px #eee;
+  margin: 20px 0 0;
+  padding: 20px 0 0;
+}
+
+footer {
+  /* ?? PROPERTY CHOICE: Using text-align: center because it centers the copyright text at the very bottom of the page. */
+  text-align: center;
+  color: #aaa;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
