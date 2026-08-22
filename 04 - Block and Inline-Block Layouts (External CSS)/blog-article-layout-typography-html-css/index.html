@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML &amp; CSS · the web's foundation</title>
+
+    <!-- Google Fonts: Cormorant Garamond (headings/bold) + Plus Jakarta Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <!-- 🧿 TAG CHOICE: Using <div> as a vertical viewport spacer. -->
+    <div class="page-container-spacer"></div>
+
+    <div class="blog-wrapper">
+
+      <article class="blog-post">
+
+        <!-- 🧿 TAG CHOICE: Using <header> because it represents introductory content or heading wrappers for the blog entry. -->
+        <header class="post-header">
+          <h1>HTML &amp; CSS: The Web's Foundation</h1>
+          <div class="byline">
+            <span class="author">✧ elara weiss</span>
+            <time datetime="2030-12-25">· 25 dec 2030 · 6 min read</time>
+          </div>
+        </header>
+
+        <!-- 🧿 TAG CHOICE: Using <section> for thematic grouping of the primary post prose content. -->
+        <section class="content-section">
+
+          <p>
+            <span class="dropcap">H</span>ypertext Markup Language (<strong>HTML</strong>) structures web content, while Cascading Style Sheets (<strong>CSS</strong>) control its presentation. Together, they form the core of web development.
+          </p>
+
+          <p>
+            HTML elements — such as headings, paragraphs, and links — provide semantic structure. CSS enables layout, colors, and fonts, ensuring <strong>separation of concerns</strong> for better accessibility and maintainability.
+          </p>
+
+          <!-- 🧿 TAG CHOICE: Using blockquote for external excerpt references. -->
+          <blockquote class="pull-quote">
+            “<strong>CSS</strong> is designed to separate content from presentation, making it a cornerstone technology of the web.”
+          </blockquote>
+
+          <h2>How CSS Works</h2>
+
+          <p>
+            CSS rules consist of <strong>selectors</strong> and declaration blocks. The <strong>cascade</strong> priority scheme determines which style applies when multiple declarations match an element, ensuring predictable rendering.
+          </p>
+
+          <!-- Two-column layout using inline-block wrapper approach -->
+          <section class="columns-wrap">
+            <div class="col col-left">
+              <p><strong>selectors</strong> · target elements by type, class (e.g. <code>.class</code>), or ID (<code>#id</code>).</p>
+            </div>
+            <!-- 🧿 TAG CHOICE: Using <div> for the right column of the inline-block grid. -->
+            <div class="col col-right">
+              <p><strong>properties &amp; values</strong> · define styling such as color, font, and margin.</p>
+            </div>
+          </section>
+
+          <!-- List with inline-block items -->
+          <ul class="insight-list">
+            <li><strong>▸ separation of concerns</strong> · improves accessibility and maintainability</li>
+            <li><strong>▸ w3c standards</strong> · ensures cross-platform consistency</li>
+          </ul>
+
+          <div class="vh-spacer"></div>
+
+          <div class="tag-group">
+            <span class="tag">#html</span>
+            <span class="tag">#css</span>
+            <span class="tag">#webdev</span>
+          </div>
+
+        </section>
+
+        <footer class="post-footer">
+          <div class="footer-meta">
+            <span>📖 all info taken from </span>
+            <address><a href="https://en.wikipedia.org/wiki/Front-end_web_development">Wikipedia.org</a></address>
+          </div>
+        </footer>
+
+      </article>
+    </div>
+  </body>
+
+</html>

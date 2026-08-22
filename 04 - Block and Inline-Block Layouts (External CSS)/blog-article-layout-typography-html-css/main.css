@@ -1,0 +1,293 @@
+/* ============================================================================
+       📦 SECTION: Reset and Base Styles
+       ============================================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2eee9;
+  /* body text → Plus Jakarta Sans */
+  font-family: 'Plus Jakarta Sans', 'Helvetica', 'Arial', sans-serif;
+  color: #2d2b27;
+  padding: 20px;
+}
+
+strong,
+b {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+code {
+  font-family: 'Plus Jakarta Sans', monospace;
+  background: #eee9e2;
+  padding: 0 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #1f3d38;
+}
+
+/* 🧿 PROPERTY CHOICE: Using a simple height-based spacer for vertical layout separation. */
+.page-container-spacer {
+  width: 100%;
+  height: 5vh;
+}
+
+.blog-wrapper {
+  width: 920px;
+  margin: 0 auto;
+  background: #fefcf9;
+  padding: 28px 40px 30px;
+  border: 1px solid #e1d8ce;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* ============================================================================
+       📦 SECTION: Typography and Post Header
+       ============================================================================ */
+.post-header {
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e8e0d6;
+  padding-bottom: 10px;
+}
+
+/* headings → Cormorant Garamond */
+h1 {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  color: #1e2c2a;
+  margin-bottom: 2px;
+}
+
+.byline {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #6b655c;
+}
+
+.byline .author {
+  font-weight: 700;
+  color: #2f403a;
+  letter-spacing: 0.3px;
+  background: #eee8e0;
+  padding: 0 12px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.byline time {
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  color: #7f786e;
+  margin-left: 4px;
+}
+
+.content-section {
+  margin-top: 4px;
+}
+
+/* body paragraphs → Plus Jakarta Sans */
+.content-section p {
+  font-family: 'Plus Jakarta Sans', 'Helvetica', 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: #2e2d29;
+  margin-bottom: 14px;
+}
+
+/* dropcap → Cormorant Garamond */
+.dropcap {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -2px;
+  color: #1c3a36;
+  float: left;
+  margin-right: 10px;
+  margin-top: 4px;
+  padding: 0 2px;
+}
+
+/* ============================================================================
+       📦 SECTION: Components and Layout Grids (Inline-Block)
+       ============================================================================ */
+.pull-quote {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: #2b3d39;
+  background: #f4efe8;
+  padding: 14px 24px;
+  margin: 10px 0 16px 0;
+  border-left: 6px solid #b8aa9a;
+  font-style: italic;
+  display: inline-block;
+  width: 100%;
+}
+
+.pull-quote strong {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #1b312d;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  color: #1b312f;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  border-bottom: 1px dotted #d2c8bb;
+  padding-bottom: 4px;
+}
+
+/* Container wrapper for the two-column inline-block layout */
+.columns-wrap {
+  width: 100%;
+  margin: 10px 0 12px 0;
+  font-size: 0;
+  /* Removes inline-block whitespace gap */
+}
+
+.col {
+  font-family: 'Plus Jakarta Sans', 'Helvetica', 'Arial', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #2e3531;
+  background: #faf7f2;
+  padding: 10px 16px;
+  border: 1px solid #e0d7cc;
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-left {
+  margin-right: 4%;
+}
+
+.col p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-family: inherit;
+}
+
+.col strong {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  color: #1a3b35;
+  letter-spacing: 0.2px;
+}
+
+/* Insight list container for inline-block list items */
+.insight-list {
+  list-style: none;
+  margin: 6px 0 12px 0;
+  padding: 0;
+  width: 100%;
+  font-size: 0;
+  /* Removes inline gap */
+}
+
+.insight-list li {
+  font-family: 'Plus Jakarta Sans', 'Helvetica', 'Arial', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  background: #f8f4ee;
+  padding: 8px 16px;
+  margin-bottom: 6px;
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin-right: 4%;
+  border-radius: 4px;
+  border-left: 4px solid #b9ad9d;
+}
+
+.insight-list li:nth-child(2n) {
+  margin-right: 0;
+}
+
+.insight-list li strong {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-weight: 700;
+  color: #1b3f39;
+  letter-spacing: 0.3px;
+}
+
+.vh-spacer {
+  height: 1.5vh;
+  width: 100%;
+  display: inline-block;
+}
+
+.tag-group {
+  margin-top: 10px;
+  width: 100%;
+  display: inline-block;
+}
+
+.tag {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: lowercase;
+  background: #e5ddd2;
+  color: #2d3d37;
+  padding: 2px 16px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+
+
+/* ============================================================================
+       📦 SECTION: Footer Styles
+       ============================================================================ */
+.post-footer {
+  margin-top: 14px;
+  border-top: 1px solid #ddd4c8;
+  padding-top: 12px;
+  width: 100%;
+  display: inline-block;
+}
+
+.footer-meta {
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #7b7469;
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.footer-meta address {
+  display: inline;
+  font-style: normal;
+  font-weight: 600;
+  color: #4a554d;
+}
