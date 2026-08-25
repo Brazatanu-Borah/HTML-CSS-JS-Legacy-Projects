@@ -1,0 +1,284 @@
+/* ============================================================================
+ 📦 SECTION: CSS Reset
+============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Clearfix Utility
+============================================================================ */
+
+/* 💡 AHA MOMENT: Floated elements are removed from normal document flow. */
+/* This clearfix technique makes the parent expand to contain its floated children. */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Header Navigation
+============================================================================ */
+
+#lab-icon img {
+  width: 25px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px 8px;
+}
+
+/* 🧿 PROPERTY CHOICE: Using width: 600px because the Google homepage keeps
+   the search area within a narrow centered content column. */
+#main-container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Google Logo
+============================================================================ */
+
+/* 📚 STUDY NOTE: This technique hides the heading text visually with
+   text-indent while displaying the logo as a background image. Screen readers
+   can still access the heading text. */
+h1#brand-logo {
+  width: 272px;
+  height: 92px;
+  background-image: url("images/google_logo.png");
+
+  text-indent: -9999px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Search Form
+============================================================================ */
+
+form {
+  position: relative;
+}
+
+/* 🧿 PROPERTY CHOICE: Using position: relative because the search icons use
+   absolute positioning and need this form as their positioning reference. */
+
+input.search {
+  width: 580px;
+  height: 50px;
+  padding: 10px;
+  padding-left: 50px;
+  margin: 30px 0;
+  border: solid 1px #ddd;
+  font-size: 16px;
+  border-radius: 100px;
+}
+
+input.search:hover {
+  border-color: #aaa;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Search Icons
+============================================================================ */
+
+/* 📚 STUDY NOTE: Absolutely positioned elements are placed relative to the
+   nearest positioned ancestor, which is the form in this layout. */
+.search-icon,
+.mic-icon,
+.google-lens-icon {
+  position: absolute;
+}
+
+.search-icon {
+  top: 47px;
+  left: 30px;
+}
+
+.mic-icon {
+  top: 45px;
+  right: 90px;
+}
+
+.google-lens-icon {
+  top: 45px;
+  right: 30px;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Search Buttons
+============================================================================ */
+
+input.submit-1,
+input.submit-2 {
+  background-color: #fff;
+  color: #333;
+  border-color: transparent;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* 🧿 PROPERTY CHOICE: Using cursor: pointer gives users visual feedback that
+   these submit controls are clickable. */
+input.submit-1:hover,
+input.submit-2:hover {
+  border-color: #ddd;
+  cursor: pointer;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Language Links
+============================================================================ */
+
+p.notes {
+  margin-top: 25px;
+}
+
+p.notes a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* 📚 STUDY NOTE: Grouping :link and :visited keeps normal and visited links
+   visually consistent while hover is handled separately. */
+p.notes a:link,
+p.notes a:visited {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Top Navigation
+============================================================================ */
+
+nav#site-header {
+  text-align: right;
+  padding: 0 10px;
+}
+
+nav#site-header ul li {
+  display: inline;
+}
+
+nav#site-header ul li a:link,
+nav#site-header ul li a:visited {
+  color: #333;
+  text-decoration: none;
+  padding: 0 5px;
+  font-size: 13px;
+}
+
+nav#site-header ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 📚 STUDY NOTE: inline-block allows the icon containers to accept padding
+   while still sitting inline with the navigation links. */
+nav#site-header li.labs,
+nav#site-header li.apps {
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 50%;
+}
+
+nav#site-header li.labs:hover,
+nav#site-header li.apps:hover {
+  background-color: #f2f2f2;
+  border-radius: 100px;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Avatar
+============================================================================ */
+
+nav#site-header li.avatar {
+  background-color: #78909c;
+  display: inline-block;
+  padding: 5px 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+nav#site-header li.avatar a:link,
+nav#site-header li.avatar a:visited {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+
+/* ============================================================================
+ 📦 SECTION: Footer
+============================================================================ */
+
+/* 🧿 PROPERTY CHOICE: Using position: fixed keeps the footer attached to the
+   bottom edge of the viewport regardless of page scroll. */
+footer {
+  background-color: #f2f2f2;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.prefooter {
+  color: #333;
+  padding: 15px 25px;
+  border-bottom: solid 1px #ddd;
+}
+
+footer nav {
+  padding: 15px 20px;
+}
+
+footer nav ul li {
+  display: inline;
+}
+
+footer nav ul li a:link,
+footer nav ul li a:visited {
+  color: #333;
+  text-decoration: none;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 💡 AHA MOMENT: Two floated lists create left and right navigation groups
+   without using Flexbox. */
+/* The clearfix class on the parent prevents the footer navigation from
+   collapsing around its floated children. */
+footer nav ul {
+  float: left;
+}
+
+footer nav ul.right-links {
+  float: right;
+}
