@@ -1,0 +1,139 @@
+/* ===============================================================
+   GLOBAL STYLES
+   =============================================================== */
+
+/* 📚 STUDY NOTE: The universal selector applies these basic styles
+   to every element, which is useful for creating a consistent base. */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: #778298;
+}
+
+/* 🧿 PROPERTY CHOICE: box-sizing: border-box because the declared
+   width and height should include padding and borders. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 📚 STUDY NOTE: 62.5% makes the browser's default 16px font size
+   equal to 10px, which makes rem calculations easier. */
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+body,
+button,
+select,
+input,
+textarea {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  font-weight: 400;
+  font-style: normal;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:link,
+a:visited {
+  color: #778298;
+}
+
+a:hover,
+a:active {
+  color: #778298;
+  text-decoration: underline;
+}
+
+/* 📚 STUDY NOTE: The cursor property gives clickable controls
+   a pointer cursor when the user moves over them. */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+a:focus,
+button:focus {
+  color: #778298;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+  color: #323232;
+}
+
+
+/* ===============================================================
+   UTILITY STYLES
+   =============================================================== */
+
+/* 📚 STUDY NOTE: This combination visually hides an element while
+   keeping it available to assistive technologies such as screen
+   readers. */
+.hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* 🧿 PROPERTY CHOICE: background-color and color define the basic
+   appearance shared by elements using the .btn utility class. */
+.btn {
+  background-color: rgb(101, 215, 119);
+  color: #ffffff;
+}
+
+/* 🧿 PROPERTY CHOICE: font-weight: 700 makes important text
+   visually stronger without changing its HTML structure. */
+.bold-text {
+  color: #323232;
+  font-weight: 700;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+/* 📚 STUDY NOTE: .wrapper provides a reusable centered container.
+   max-width limits its size while width: 100% lets it shrink on
+   smaller screens. */
+.wrapper {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
