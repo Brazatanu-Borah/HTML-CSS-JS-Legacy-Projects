@@ -1,0 +1,485 @@
+/* ============================================================================
+   📦 SECTION: RESET & BASE
+   ============================================================================ */
+
+/* 🧠 CONCEPT: A universal selector can be used for a simple reset.
+   Here it removes the browser's default margin and padding from all elements. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 🧿 PROPERTY CHOICE: background: #f8f9fa because the page needs a very
+   light background without relying on newer CSS color features. */
+body {
+  width: 100%;
+  background: #f8f9fa;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 16px;
+  color: #1a1b2f;
+  text-align: center;
+}
+
+
+/* ============================================================================
+   📦 SECTION: CONTAINER
+   ============================================================================ */
+
+/* 🔍 WHY: A percentage width keeps the container fluid while max-width
+   prevents the content from becoming excessively wide on large screens. */
+.container {
+  width: 92%;
+  max-width: 56em;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+
+/* ============================================================================
+   📦 SECTION: CLEARFIX
+   ============================================================================ */
+
+/* 🧠 CONCEPT: Floated elements are removed from the normal document flow.
+   The clearfix makes the parent contain its floated children.
+ */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+
+/* ============================================================================
+   📦 SECTION: NAVBAR
+   ============================================================================ */
+
+#navbar {
+  width: 100%;
+  padding: 1.4em 0 0.9em 0;
+  border-bottom: 1px solid #d1d8e0;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+/* 🔍 WHY: The inner wrapper provides a containing area for the logo and
+   navigation links. Floats are then used to place them on opposite sides. */
+#navbar .nav-inner {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+#navbar .logo {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.75em;
+  letter-spacing: 0.04em;
+  color: #1a1b2f;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+#navbar .nav-links {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.125em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  float: right;
+}
+
+#navbar .nav-links a {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1em;
+  color: #4a5b6e;
+  text-decoration: none;
+  padding: 0.3em 0.9em;
+  border-bottom: 1px solid transparent;
+}
+
+/* 💡 AHA MOMENT: A transparent border can reserve space before hover.
+   When the border color changes on hover, the link does not suddenly
+   change size because the border was already present. */
+#navbar .nav-links a:hover {
+  color: #d4af37;
+  border-bottom-color: #d4af37;
+}
+
+#navbar .nav-links .sep {
+  display: inline-block;
+  font-weight: 400;
+  color: #b8c4d0;
+  padding: 0 0.2em;
+}
+
+
+/* ============================================================================
+   📦 SECTION: HERO
+   ============================================================================ */
+
+#hero {
+  width: 100%;
+  padding: 3.6em 0 3.8em 0;
+  text-align: center;
+  background: #f8f9fa;
+  border-bottom: 1px solid #d1d8e0;
+}
+
+#hero h1 {
+  font-weight: 900;
+  font-size: 4em;
+  letter-spacing: 0.02em;
+  color: #1a1b2f;
+  line-height: 1.1;
+  margin: 0 0 0.1em 0;
+}
+
+#hero .hero-sub {
+  font-weight: 700;
+  font-size: 1.375em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #4a5b6e;
+  margin: 0 0 0.6em 0;
+  line-height: 1.5;
+}
+
+#hero .hero-line {
+  display: inline-block;
+  width: 6em;
+  height: 0;
+  border: 0;
+  border-top: 2px solid #d4af37;
+  margin: 0.4em 0 1em 0;
+}
+
+#hero .hero-desc {
+  font-weight: 400;
+  font-size: 1.25em;
+  color: #2c3e50;
+  max-width: 30em;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* ============================================================================
+   📦 SECTION: GALLERY
+   ============================================================================ */
+
+/* ⚠️ CAVEAT: The original stylesheet described the gallery as having a
+   "zoom effect", but CSS transform and transition are not CSS 2.1.
+   Those declarations have therefore been removed. */
+#gallery {
+  width: 100%;
+  padding: 3.4em 0 3.8em 0;
+  text-align: center;
+  border-bottom: 1px solid #d1d8e0;
+  background: #ffffff;
+}
+
+#gallery .section-title {
+  font-weight: 900;
+  font-size: 1.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1b2f;
+  margin: 0 0 1.4em 0;
+}
+
+#gallery .grid {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+#gallery .grid-item {
+  display: inline-block;
+  width: 30%;
+  margin: 0 1.5% 1.6em 1.5%;
+  vertical-align: top;
+  font-size: 16px;
+  letter-spacing: normal;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #d1d8e0;
+  padding: 0 0 0.8em 0;
+  overflow: hidden;
+}
+
+#gallery .grid-item:hover {
+  /* 🔍 WHY: box-shadow is intentionally kept here because it is
+     available in CSS 2.1. The hover effect is therefore limited to
+     the shadow instead of using a CSS3 transform. */
+  box-shadow: 0 4px 14px #d9d9d9;
+}
+
+
+/* 🔍 WHY: The padding-bottom percentage creates a roughly square
+   area while keeping the element fluid. */
+#gallery .grid-item .thumb {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 0 0.6em 0;
+  background-color: #d1d8e0;
+}
+
+/* 📚 STUDY NOTE: background-size is not part of CSS 2.1.
+   If strict CSS 2.1 compatibility is required, it should be removed.
+   The original image-cover behavior therefore cannot be reproduced
+   using CSS 2.1 alone. */
+
+
+/* ============================================================================
+   📦 SECTION: GALLERY IMAGES
+   ============================================================================ */
+
+#gallery .grid-item:nth-child(1) .thumb {
+  background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=400&fit=crop&crop=center');
+}
+
+#gallery .grid-item:nth-child(2) .thumb {
+  background-image: url('https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=400&h=400&fit=crop&crop=center');
+}
+
+#gallery .grid-item:nth-child(3) .thumb {
+  background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=400&fit=crop&crop=center');
+}
+
+#gallery .grid-item:nth-child(4) .thumb {
+  background-image: url('https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=400&h=400&fit=crop&crop=center');
+}
+
+#gallery .grid-item:nth-child(5) .thumb {
+  background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&h=400&fit=crop&crop=center');
+}
+
+#gallery .grid-item:nth-child(6) .thumb {
+  background-image: url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&h=400&fit=crop&crop=center');
+}
+
+#gallery .grid-item .item-title {
+  font-weight: 700;
+  font-size: 1.125em;
+  color: #1a1b2f;
+  margin: 0 0 0.1em 0;
+  line-height: 1.3;
+}
+
+#gallery .grid-item .item-desc {
+  font-weight: 400;
+  font-size: 0.9375em;
+  color: #4a5b6e;
+  line-height: 1.4;
+}
+
+
+/* ============================================================================
+   📦 SECTION: MESSAGE
+   ============================================================================ */
+
+#message {
+  width: 100%;
+  padding: 3.6em 0 4em 0;
+  text-align: center;
+  border-bottom: 1px solid #d1d8e0;
+  background: #ffffff;
+}
+
+#message .section-title {
+  font-weight: 900;
+  font-size: 1.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1b2f;
+  margin: 0 0 1.2em 0;
+}
+
+#message .msg-content {
+  display: inline-block;
+  width: 72%;
+  text-align: center;
+}
+
+#message .msg-content .quote-mark {
+  font-weight: 700;
+  font-size: 4em;
+  color: #d4af37;
+  line-height: 0.5;
+  display: block;
+  margin: 0 0 0.2em 0;
+}
+
+/* ⚠️ CAVEAT: opacity is a CSS3 property, so it has been removed
+   from the original rule to maintain the CSS 2.1 requirement. */
+
+#message .msg-content p {
+  font-weight: 400;
+  font-size: 1.375em;
+  color: #1a1b2f;
+  line-height: 1.7;
+  margin: 0 0 0.6em 0;
+  font-style: italic;
+}
+
+#message .msg-content .attribution {
+  font-weight: 700;
+  font-size: 1.125em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #4a5b6e;
+  font-style: normal;
+}
+
+
+/* ============================================================================
+   📦 SECTION: CONTACT
+   ============================================================================ */
+
+#contact {
+  width: 100%;
+  padding: 3.4em 0 3.8em 0;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+#contact .section-title {
+  font-weight: 900;
+  font-size: 1.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a1b2f;
+  margin: 0 0 1.2em 0;
+}
+
+#contact .contact-links {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.25em;
+  letter-spacing: 0.04em;
+  color: #1a1b2f;
+}
+
+#contact .contact-links a {
+  font-weight: 700;
+  font-size: 1em;
+  color: #4a5b6e;
+  text-decoration: none;
+  padding: 0.2em 0.5em;
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+}
+
+#contact .contact-links a:hover {
+  color: #d4af37;
+  border-bottom-color: #d4af37;
+}
+
+#contact .contact-links .sep {
+  display: inline-block;
+  font-weight: 400;
+  color: #b8c4d0;
+  padding: 0 0.4em;
+}
+
+#contact .contact-note {
+  font-weight: 400;
+  font-size: 1em;
+  color: #2c3e50;
+  margin: 1.4em 0 0 0;
+  line-height: 1.5;
+}
+
+
+/* ============================================================================
+   📦 SECTION: FOOTER
+   ============================================================================ */
+
+#footer {
+  width: 100%;
+  padding: 1.2em 0;
+  text-align: center;
+  border-top: 1px solid #d1d8e0;
+  background: #f8f9fa;
+}
+
+#footer p {
+  font-weight: 400;
+  font-size: 0.875em;
+  color: #8b9aab;
+  letter-spacing: 0.04em;
+}
+
+
+/* ============================================================================
+   📦 SECTION: CSS 2.1 FALLBACKS
+   ============================================================================ */
+
+/* 🧠 CONCEPT: Older layouts often relied on inline elements and floats
+   instead of newer layout systems. These rules are kept simple so the
+   stylesheet remains usable with older CSS implementations. */
+.grid-item {
+  zoom: 1;
+  display: inline;
+}
+
+#navbar .nav-links a {
+  zoom: 1;
+  display: inline;
+}
+
+#contact .contact-links a {
+  zoom: 1;
+  display: inline;
+}
+
+.container {
+  text-align: left;
+}
+
+
+/* ============================================================================
+   📦 SECTION: PRINT STYLES
+   ============================================================================ */
+
+@media print {
+
+  body {
+    background: #fff;
+  }
+
+  #navbar .nav-links a {
+    color: #333;
+  }
+
+  #navbar .nav-links a:hover {
+    border-bottom-color: transparent;
+  }
+
+  .grid-item .thumb {
+    background: #eee !important;
+    background-image: none !important;
+  }
+
+  #contact .contact-links a {
+    color: #333;
+  }
+
+  #contact .contact-links a:hover {
+    border-bottom-color: transparent;
+  }
+}

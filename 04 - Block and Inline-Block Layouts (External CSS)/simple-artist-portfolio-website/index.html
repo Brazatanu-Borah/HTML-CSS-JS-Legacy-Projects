@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elena Vogt — Painter</title>
+
+    <!-- 🧠 CONCEPT: The <link> element loads an external stylesheet into the page.
+    Here, Google Fonts provides the Playfair Display typeface used by the design. -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <!-- 🔍 WHY: Keeping the custom CSS in a separate file makes the HTML easier
+    to read and keeps presentation rules outside the document structure. -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+
+    <!-- ======= 📦 START: Navigation ================================= -->
+    <!-- 🧿 TAG CHOICE: Using <div> here because this example is deliberately
+    demonstrating an older/simple layout style rather than modern semantic HTML. -->
+    <div id="navbar">
+      <div class="container">
+        <!-- 🧠 CONCEPT: The "clearfix" class is typically used in older CSS
+        layouts to make a parent contain floated child elements. -->
+        <div class="nav-inner clearfix">
+          <a href="#" class="logo">Elena Vogt</a>
+          <div class="nav-links">
+            <a href="#gallery">Gallery</a>
+            <span class="sep">•</span>
+            <a href="#message">Message</a>
+            <span class="sep">•</span>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======= 📦 END: Navigation =================================== -->
+
+
+    <!-- ======= 📦 START: Hero ======================================= -->
+    <div id="hero">
+
+      <!-- ⚠️ CAVEAT: Inline styles work, but they mix presentation with
+      document structure. A separate CSS rule would normally be easier to maintain. -->
+      <div class="container" style="text-align: center;">
+        <h1>Color &amp; Light</h1>
+        <p class="hero-sub">Contemporary Painting</p>
+        <hr class="hero-line" />
+        <p class="hero-desc">
+          Exploring the boundary between abstraction and reality,
+          one brushstroke at a time.
+        </p>
+      </div>
+    </div>
+    <!-- ======= 📦 END: Hero ========================================= -->
+
+
+    <!-- ======= 📦 START: Gallery ==================================== -->
+    <div id="gallery">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Gallery</h2>
+        <div class="grid">
+          <div class="grid-item">
+            <span class="thumb"></span>
+            <p class="item-title">Palette Study</p>
+            <p class="item-desc">Oil on canvas, 24″</p>
+          </div>
+          <div class="grid-item">
+            <span class="thumb"></span>
+            <p class="item-title">Watercolor No. 4</p>
+            <p class="item-desc">Watercolor, 16″</p>
+          </div>
+          <div class="grid-item">
+            <span class="thumb"></span>
+            <p class="item-title">Tubes &amp; Turpentine</p>
+            <p class="item-desc">Mixed media, 20″</p>
+          </div>
+          <div class="grid-item">
+            <span class="thumb"></span>
+            <p class="item-title">Strokes I</p>
+            <p class="item-desc">Acrylic, 30″</p>
+          </div>
+          <div class="grid-item">
+            <span class="thumb"></span>
+            <p class="item-title">Canvas in Blue</p>
+            <p class="item-desc">Oil on linen, 36″</p>
+          </div>
+          <div class="grid-item">
+            <span class="thumb"></span>
+            <p class="item-title">Artist's Hands</p>
+            <p class="item-desc">Charcoal, 18″</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======= 📦 END: Gallery ====================================== -->
+
+
+    <!-- ======= 📦 START: Artist's Message =========================== -->
+    <div id="message">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Artist's Message</h2>
+        <div class="msg-content">
+          <span class="quote-mark">&#8220;</span>
+          <p>
+            Painting is a dialogue between intuition and intention.
+            Each layer of color builds a history, inviting the viewer
+            to pause, look closer, and discover their own story.
+          </p>
+          <p class="attribution">&mdash; Elena Vogt</p>
+        </div>
+      </div>
+    </div>
+    <!-- ======= 📦 END: Artist's Message ============================= -->
+
+
+    <!-- ======= 📦 START: Contact ==================================== -->
+    <div id="contact">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Connect</h2>
+        <div class="contact-links">
+          <!-- 🧠 CONCEPT: The "mailto:" URL scheme tells the browser to open
+          the user's configured email application with this address. -->
+          <a href="mailto:studio@elenavogt.art">Email</a>
+          <span class="sep">•</span>
+          <!-- ⚠️ CAVEAT: target="_blank" opens the link in a new browsing context (new tab!).
+          For external links, modern HTML commonly also uses rel="noopener". -->
+          <a href="#" target="_blank">Facebook</a>
+          <span class="sep">•</span>
+          <a href="#" target="_blank">Instagram</a>
+        </div>
+        <p class="contact-note">
+          I'd love to hear from you — feel free to reach out.
+        </p>
+      </div>
+    </div>
+    <!-- ======= 📦 END: Contact ====================================== -->
+
+
+    <!-- ======= 📦 START: Footer ===================================== -->
+    <div id="footer">
+      <div class="container" style="text-align: center;">
+        <p>&copy; 2026 Elena Vogt &middot; all rights reserved</p>
+      </div>
+    </div>
+    <!-- ======= 📦 END: Footer ======================================= -->
+
+  </body>
+
+</html>
