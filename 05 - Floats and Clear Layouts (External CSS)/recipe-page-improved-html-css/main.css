@@ -1,0 +1,465 @@
+/* ----- RESET ----- */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- PAGE WRAPPER ----- */
+body {
+  background-color: #fcfaf8;
+  color: #292524;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #e7e5e4;
+  margin: 40px 0;
+  padding: 0;
+}
+
+/* ----- HEADER ----- */
+header {
+  background-color: #fef3c7;
+  padding: 40px;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(120, 53, 15, 0.08), 0 8px 10px -6px rgba(120, 53, 15, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+header h1 {
+  color: #78350f;
+  font-size: 2.5rem;
+  margin: 0 0 12px;
+  padding: 0;
+  letter-spacing: -0.02em;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #78716c;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+/* ----- NAVIGATION ----- */
+nav {
+  background-color: #ffffff;
+  border: 1px solid rgba(217, 119, 6, 0.15);
+  padding: 16px 20px;
+  margin: 0;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 12px 8px 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #78350f;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-color: #fff;
+  padding: 8px 14px;
+  margin: 0;
+  border-radius: 20px;
+  border: 1px solid #fcd34d;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #78350f;
+  color: #ffffff;
+  border-color: #78350f;
+}
+
+/* ----- RECIPE SECTIONS (cards) ----- */
+.recipe-section {
+  background-color: #ffffff;
+  border: 1px solid #e7e5e4;
+  border-radius: 12px;
+  margin: 24px 0 0;
+  padding: 32px;
+  box-shadow: 0 10px 25px -5px rgba(120, 53, 15, 0.08), 0 8px 10px -6px rgba(120, 53, 15, 0.08);
+}
+
+.recipe-section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.recipe-section h2 {
+  color: #78350f;
+  font-size: 1.75rem;
+  border-bottom: 2px solid #fef3c7;
+  padding: 0 0 12px;
+  margin: 0 0 20px;
+}
+
+.recipe-section h3 {
+  color: #92400e;
+  font-size: 1.25rem;
+  margin: 24px 0 12px;
+  padding: 0;
+}
+
+.recipe-section p {
+  font-size: 1.05rem;
+  color: #292524;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+/* ----- IMAGE (floated right) ----- */
+.image-container {
+  float: right;
+  width: 45%;
+  margin: 0 0 16px 28px;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #fef3c7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+figure img:hover {
+  box-shadow: 0 8px 20px rgba(120, 53, 15, 0.2);
+}
+
+figcaption {
+  font-style: italic;
+  color: #78716c;
+  font-size: 0.9rem;
+  margin: 8px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ----- STATS GRID  ----- */
+.stats-grid {
+  background: #fafaf9;
+  border-radius: 8px;
+  border: 1px solid #e7e5e4;
+  padding: 4px 0;
+  margin: 0 0 20px;
+  overflow: hidden;
+  /* clearfix */
+}
+
+.stats-grid .stat-item {
+  float: left;
+  width: 25%;
+  padding: 16px 0;
+  text-align: center;
+  box-sizing: border-box;
+  border-right: 1px solid #e7e5e4;
+}
+
+.stats-grid .stat-item:last-child {
+  border-right: none;
+}
+
+.stats-grid .stat-label {
+  display: block;
+  font-weight: 600;
+  color: #78350f;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.stats-grid .stat-value {
+  display: block;
+  color: #292524;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* caption-like heading above stats */
+.stats-caption {
+  font-weight: bold;
+  margin: 0 0 12px;
+  padding: 0;
+  color: #78716c;
+  display: block;
+}
+
+/* ----- DEFINITION LIST ----- */
+dl {
+  background: #fafaf9;
+  padding: 20px;
+  margin: 0;
+  border-radius: 8px;
+  border: 1px solid #e7e5e4;
+  overflow: hidden;
+  /* clearfix */
+}
+
+dl dt {
+  float: left;
+  width: 50%;
+  font-weight: 600;
+  color: #78350f;
+  margin: 0 0 12px;
+  padding: 0;
+  clear: left;
+}
+
+dl dd {
+  float: left;
+  width: 50%;
+  margin: 0 0 12px;
+  padding: 0;
+  color: #78716c;
+}
+
+/* ----- LISTS ----- */
+.recipe-section ul,
+.recipe-section ol {
+  margin: 0 0 16px 20px;
+  padding: 0;
+}
+
+.recipe-section li {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #292524;
+}
+
+/* ----- FORM ----- */
+form {
+  background-color: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 8px;
+  padding: 28px;
+  margin: 0;
+}
+
+form p {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #292524;
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  font-size: 1rem;
+  padding: 12px;
+  margin: 0;
+  border: 1px solid #e7e5e4;
+  border-radius: 6px;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #d97706;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+  width: 100%;
+  max-width: 400px;
+}
+
+form textarea {
+  width: 100%;
+  max-width: 600px;
+}
+
+form fieldset {
+  border: 1px solid #e7e5e4;
+  border-radius: 6px;
+  padding: 20px;
+  background: white;
+  margin: 20px 0;
+}
+
+form legend {
+  font-weight: 600;
+  padding: 0 8px;
+  color: #78350f;
+  margin: 0;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin: 0 8px 0 0;
+  padding: 0;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  display: inline-block;
+  background-color: #78350f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 10px 0 0;
+}
+
+form input[type="reset"] {
+  background-color: #78716c;
+}
+
+form input[type="submit"]:hover {
+  background-color: #92400e;
+}
+
+form input[type="reset"]:hover {
+  background-color: #57534e;
+}
+
+/* ----- ASIDE (share) ----- */
+aside {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 0;
+  box-shadow: 0 10px 25px -5px rgba(120, 53, 15, 0.08), 0 8px 10px -6px rgba(120, 53, 15, 0.08);
+}
+
+aside h2 {
+  color: #78350f;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #fde68a;
+  padding: 0 0 10px;
+  margin: 0 0 16px;
+}
+
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside li {
+  display: inline-block;
+  margin: 0 12px 8px 0;
+  padding: 0;
+}
+
+aside a {
+  display: inline-block;
+  text-decoration: none;
+  color: #78350f;
+  font-weight: 600;
+  background: white;
+  padding: 8px 16px;
+  margin: 0;
+  border-radius: 20px;
+  border: 1px solid #fcd34d;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+aside a:hover {
+  background: #78350f;
+  color: white;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  text-align: center;
+  background-color: transparent;
+  padding: 40px 20px;
+  margin: 0;
+  color: #78716c;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+footer a {
+  color: #78350f;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #92400e;
+}
+
+/* ----- RESPONSIVE CSS ----- */
+@media (max-width: 700px) {
+  .stats-grid .stat-item {
+    float: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e7e5e4;
+    padding: 12px 0;
+  }
+
+  .stats-grid .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .image-container {
+    float: none;
+    width: 100%;
+    margin: 0 0 16px 0;
+  }
+
+  dl dt,
+  dl dd {
+    float: none;
+    width: 100%;
+    margin: 0 0 4px;
+  }
+}
