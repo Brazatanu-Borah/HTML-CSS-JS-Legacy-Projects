@@ -1,0 +1,767 @@
+/* ==========================================================================
+   1. RESET & BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+}
+
+/* ==========================================================================
+   2. LAYOUT (wrapper, main, section)
+   ========================================================================== */
+.wrapper {
+  margin: 0 auto;
+  width: 1400px;
+}
+
+main {
+  padding: 40px 0 0 0;
+}
+
+.section {
+  margin: 40px 0;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY (headings, links)
+   ========================================================================== */
+h1,
+h2,
+h3 {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+main figure a {
+  color: rgba(0, 0, 0, 0.801);
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+}
+
+main figure a:hover {
+  text-decoration: underline;
+}
+
+.brands-column a {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brands-column a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   4. MAIN CONTENT – GRID (columns, thumbnails, brands)
+   ========================================================================== */
+.content-column-wrapper,
+.thumbnail-wrapper {
+  display: flow-root;
+}
+
+/* columns */
+.content-column-1,
+.content-column-2,
+.content-column-3 {
+  float: left;
+}
+
+.content-column-1 {
+  width: 48%;
+}
+
+.content-column-2 {
+  width: 24%;
+}
+
+.content-column-3 {
+  width: 24%;
+}
+
+.content-column-1,
+.content-column-2 {
+  margin-right: 25px;
+}
+
+/* thumbnails */
+.thumbnail-wrapper-1,
+.thumbnail-wrapper-2,
+.thumbnail-wrapper-3,
+.thumbnail-wrapper-4 {
+  float: left;
+  width: 24%;
+}
+
+.thumbnail-wrapper-2,
+.thumbnail-wrapper-3,
+.thumbnail-wrapper-4 {
+  margin-left: 18px;
+}
+
+/* brands */
+.brand-content .wrapper {
+  display: flow-root;
+}
+
+.brands-column {
+  float: left;
+  margin-right: 25px;
+  width: 32%;
+}
+
+.brands-column:last-child {
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   5. MAIN CONTENT – STYLES (images, media object, ad panels)
+   ========================================================================== */
+main img {
+  display: block;
+  width: 100%;
+}
+
+main img:hover {
+  opacity: 0.7;
+}
+
+.ad-image img:hover {
+  opacity: 1;
+}
+
+.marketing-banner .wrapper {
+  margin-bottom: 50px;
+  padding: 0 200px;
+}
+
+/* media object */
+.media-object>div {
+  border-top: solid 1px rgba(192, 192, 192, 0.404);
+  display: flow-root;
+  padding: 15px 0;
+}
+
+.media-object img {
+  float: left;
+  width: 20%;
+}
+
+.media-object p {
+  bottom: 25px;
+  float: left;
+  margin-left: 15px;
+  position: relative;
+  width: 75%;
+}
+
+/* article links in columns */
+main .content-column-1 p a,
+main .content-column-2 p a {
+  border-top: solid 1px rgba(192, 192, 192, 0.404);
+  color: rgba(12, 12, 12, 0.712);
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 10px;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+main .top-content .content-column-1 p a {
+  border: none;
+}
+
+main .content-column-1 p a:hover,
+main .content-column-2 p a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   6. HEADER STYLES
+   ========================================================================== */
+header {
+  background-color: #0c0c0c;
+  border-bottom: solid 1px #ffffff2c;
+  color: #fff;
+}
+
+.header-brand-section {
+  display: flow-root;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.header-brand-section .wrapper {
+  position: relative;
+}
+
+/* left side nav */
+.header-brand-section img {
+  float: left;
+  height: 40px;
+  margin-left: 45px;
+  margin-right: 4px;
+}
+
+.header-brand-section nav ul li {
+  display: inline;
+  float: left;
+  margin-right: 35px;
+  position: relative;
+  top: 10px;
+}
+
+.header-brand-section nav a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.header-brand-section nav ul li:first-child a {
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  top: -3px;
+}
+
+/* right side navbar */
+.header-brand-section .navbar {
+  float: right;
+  list-style-type: none;
+}
+
+.header-brand-section .navbar li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  top: 4px;
+}
+
+.header-brand-section .navbar li.search-container {
+  margin-right: 0;
+}
+
+.header-brand-section .navbar li.sign-in-btn {
+  margin-right: 0;
+}
+
+.header-brand-section .navbar a.navbar-links {
+  color: #e6e6e6;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.header-brand-section .navbar a.navbar-links:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-brand-section .navbar .search-container img {
+  cursor: pointer;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 13px;
+  position: relative;
+  top: 4px;
+  width: 20px;
+}
+
+.header-brand-section .navbar li button {
+  background-color: transparent;
+  border: solid 1px #fff;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+
+.header-brand-section .navbar li button:hover {
+  background-color: #555555;
+}
+
+/* burger icon */
+.burger-icon input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
+}
+
+.sidebarIconToggle {
+  cursor: pointer;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 12px;
+  width: 18px;
+  z-index: 20;
+}
+
+.spinner {
+  background-color: #fff;
+  height: 1px;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+.spinner.middle,
+.spinner.bottom {
+  margin-top: 7px;
+}
+
+#openSidebarMenu:checked~.sidebarIconToggle>.spinner.middle {
+  opacity: 0;
+}
+
+#openSidebarMenu:checked~.sidebarIconToggle>.spinner.top {
+  margin-top: 8px;
+  transform: rotate(135deg);
+}
+
+#openSidebarMenu:checked~.sidebarIconToggle>.spinner.bottom {
+  margin-top: -9px;
+  transform: rotate(-135deg);
+}
+
+/* ==========================================================================
+   7. FOOTER STYLES
+   ========================================================================== */
+footer {
+  background-color: #0c0c0c;
+  color: #fff;
+  padding-top: 40px;
+}
+
+footer .wrapper {
+  padding-bottom: 30px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* footer search bar */
+.search-container {
+  position: relative;
+}
+
+.search-container input,
+.search-container input:focus {
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 15px 15px;
+  width: 100%;
+}
+
+::placeholder {
+  color: #323232;
+  opacity: 0.9;
+}
+
+.search-container .search-icon {
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* footer rows */
+.footer-row {
+  display: flow-root;
+}
+
+.footer-row div {
+  float: left;
+  width: 14%;
+}
+
+.footer-row h4 {
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+.footer-row ul {
+  list-style-type: none;
+}
+
+.footer-row ul li {
+  line-height: 1.6;
+}
+
+/* footer brand section */
+.footer-brand-section {
+  border-bottom: solid 1px rgba(112, 112, 112, 0.4);
+  border-top: solid 1px rgba(112, 112, 112, 0.4);
+  display: flow-root;
+  margin: 50px 0 20px 0;
+  padding: 30px 0 10px 0;
+}
+
+.footer-brand-section figure img {
+  float: left;
+  height: 40px;
+  margin-right: 4px;
+}
+
+.footer-brand-section figure span {
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.footer-brand-section figure span a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-brand-section .navbar {
+  float: right;
+}
+
+.footer-brand-section .navbar li {
+  display: inline-block;
+  margin-left: 25px;
+  position: relative;
+  bottom: 20px;
+}
+
+.footer-brand-section .navbar a.navbar-links {
+  color: #e6e6e6;
+}
+
+.footer-brand-section .navbar a.navbar-links:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-brand-section .navbar li:nth-child(3) {
+  border-right: solid 1px rgba(112, 112, 112, 0.4);
+  padding-right: 25px;
+}
+
+.footer-brand-section .navbar li:nth-child(4) {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer-brand-section .navbar a img {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  width: 20px;
+}
+
+.footer-brand-section .navbar li button {
+  background-color: transparent;
+  border: solid 1px #fff;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 10px;
+}
+
+.footer-brand-section .navbar li button:hover {
+  background-color: #555555;
+}
+
+/* footer legal & copyright */
+.footer-legal-section a,
+.footer-copyright-section {
+  color: #e6e6e6;
+  font-size: 12px;
+}
+
+.footer-legal-section {
+  margin-bottom: 30px;
+}
+
+.footer-legal-section ul {
+  list-style-type: none;
+}
+
+.footer-legal-section ul li {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.footer-copyright-section {
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE – 2 BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet: max-width 1024px */
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  /* Main content columns: two columns for .content-column-1 & .content-column-2,
+     .content-column-3 becomes full-width with flex children */
+  .content-column-1,
+  .content-column-2 {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .content-column-2 {
+    margin-right: 0;
+  }
+
+  .content-column-3 {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    float: none;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .sidepanel-item {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .sidepanel-item:first-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Thumbnails: 2 per row */
+  .thumbnail-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .thumbnail-wrapper-1,
+  .thumbnail-wrapper-2,
+  .thumbnail-wrapper-3,
+  .thumbnail-wrapper-4 {
+    float: none;
+    flex: 0 0 48%;
+    margin-left: 0;
+    margin-bottom: 30px;
+    width: 48%;
+  }
+
+  /* Brands: 2 per row */
+  .brands-column {
+    float: none;
+    flex: 0 0 48%;
+    margin-right: 0;
+    width: 48%;
+  }
+
+  .brand-content .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .brands-column:last-child {
+    margin-top: 30px;
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  /* Marketing banner */
+  .marketing-banner .wrapper {
+    padding: 0 40px;
+  }
+
+  /* Footer rows: adjust columns to 2 per row (≈50% width) */
+  .footer-row div {
+    float: left;
+    width: 50%;
+  }
+
+  .footer-row div:nth-child(odd) {
+    clear: left;
+  }
+}
+
+/* Mobile: max-width 768px */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  /* All columns full width, no floats */
+  .content-column-1,
+  .content-column-2,
+  .content-column-3 {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .content-column-3 {
+    display: block;
+  }
+
+  .sidepanel-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Thumbnails: full width */
+  .thumbnail-wrapper-1,
+  .thumbnail-wrapper-2,
+  .thumbnail-wrapper-3,
+  .thumbnail-wrapper-4 {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  /* Brands: full width */
+  .brands-column {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .brands-column:last-child {
+    margin-top: 0;
+  }
+
+  /* Marketing banner */
+  .marketing-banner .wrapper {
+    padding: 0 15px;
+  }
+
+  /* Media object: stack image and text */
+  .media-object img {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .media-object p {
+    bottom: 0;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Footer rows: single column */
+  .footer-row div {
+    float: none;
+    width: 100%;
+  }
+
+  /* Header: adjust logo and nav for smaller screens */
+  .header-brand-section img {
+    margin-left: 20px;
+    height: 30px;
+  }
+
+  .header-brand-section nav ul li {
+    display: none;
+    /* hide main nav items on mobile (keep burger icon) */
+  }
+
+  .header-brand-section nav ul li:first-child {
+    display: none;
+  }
+
+  .header-brand-section .navbar li {
+    margin-right: 10px;
+  }
+
+  .header-brand-section .navbar a.navbar-links {
+    font-size: 13px;
+  }
+
+  .header-brand-section .navbar .search-container img {
+    height: 16px;
+    width: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .header-brand-section .navbar li button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  /* Footer brand section: stack elements */
+  .footer-brand-section {
+    text-align: center;
+  }
+
+  .footer-brand-section figure {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .footer-brand-section .navbar {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-brand-section .navbar li {
+    margin: 5px 10px;
+    bottom: 0;
+  }
+
+  .footer-brand-section .navbar li:nth-child(3) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .footer-brand-section .navbar li:nth-child(4) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Footer legal: wrap items */
+  .footer-legal-section ul li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+}

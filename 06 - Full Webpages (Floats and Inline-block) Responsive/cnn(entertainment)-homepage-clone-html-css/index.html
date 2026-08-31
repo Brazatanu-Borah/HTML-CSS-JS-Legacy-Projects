@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>CNN-ENTERTAINMENT Homepage Clone UI | HTML CSS</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+  </head>
+
+  <body>
+
+    <!-- HEADER SECTION -->
+    <header class="header-brand-section">
+      <div class="wrapper">
+        <nav>
+          <div class="burger-icon">
+            <input type="checkbox" id="openSidebarMenu" />
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+              <div class="spinner top"></div>
+              <div class="spinner middle"></div>
+              <div class="spinner bottom"></div>
+            </label>
+          </div>
+          <a href="#">
+            <img src="assets/icons/CNN_logo.png" alt="An icon representing the logo for CNN" />
+          </a>
+          <ul>
+            <li><a href="#">Entertainment</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Television</a></li>
+            <li><a href="#">Celebrity</a></li>
+          </ul>
+        </nav>
+        <ul class="navbar">
+          <li><a href="#" class="navbar-links">Watch</a></li>
+          <li><a href="#" class="navbar-links">Listen</a></li>
+          <li><a href="#" class="navbar-links">Live TV</a></li>
+          <li class="search-container">
+            <img src="assets/icons/search_icon_white.svg" alt="An icon of a magnifying glass depicting search" />
+          </li>
+          <li class="sign-in-btn"><button>Sign In</button></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main>
+
+      <!-- 'Entertainment' Section -->
+      <section class="top-content section">
+        <div class="wrapper">
+          <h1>Entertainment</h1>
+          <div class="content-column-wrapper">
+            <div class="content-column-1">
+              <figure>
+                <a href="#"><img src="assets/images/taylor-swift.jpg" alt="Taylor Swift" /></a>
+                <caption><a href="#">Travis Kelce is speechless as Jason Sudeikis pops awkward question about Taylor Swift</a></caption>
+              </figure>
+              <div class="media-object">
+                <div>
+                  <a href="#"><img src="assets/images/katy-perry-harrison-butker.jpg" alt="Katy Perry" /></a>
+                  <p><a href="#">Katy Perry &lsquo;fixed&rsquo; Harrison Butker&rsquo;s controversial commencement speech</a></p>
+                </div>
+                <div>
+                  <a href="#"><img src="assets/images/wolverine-popcorn-toy.jpg" alt="Wolverine Popcorn Toy" /></a>
+                  <p><a href="#">Ryan Reynolds has declared &lsquo;War of the Popcorn Buckets.&rsquo; He&rsquo;s honestly onto something</a></p>
+                </div>
+                <div>
+                  <a href="#"><img src="assets/images/jennifer.jpg" alt="Jennifer Lopez" /></a>
+                  <p><a href="#">Jennifer Lopez cancels tour to be with family: &lsquo;I wouldn&rsquo;t do this if I didn&rsquo;t feel that it was absolutely necessary&rsquo;</a></p>
+                </div>
+                <div>
+                  <a href="#"><img src="assets/images/eminem.jpg" alt="Eminem" /></a>
+                  <p><a href="#">Eminem releases &lsquo;Houdini&rsquo; single with a star-filled music video</a></p>
+                </div>
+                <div>
+                  <a href="#"><img src="assets/images/lenny-kravitz.jpg" alt="Lenny Kravitz" /></a>
+                  <p><a href="#">Lenny Kravitz is still all about being celibate as he waits for the right person</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="content-column-2">
+              <figure>
+                <a href="#"><img src="assets/images/adele.jpg" alt="Adele" /></a>
+                <caption><a href="#">Adele scolds audience member who makes anti-Pride Month comment during Las Vegas concert</a></caption>
+              </figure>
+              <p><a href="#">&lsquo;The Life & Murder of Nicole Brown Simpson&rsquo; wants you to see her as more than just a victim</a></p>
+              <p><a href="#">Singer Taylor Momsen bit by a bat while performing on stage</a></p>
+              <p><a href="#">When it comes to climate change and democracy, Liev Schreiber is taking it personally</a></p>
+              <p><a href="#">&lsquo;Young Woman and the Sea&rsquo; swimmingly channels old-fashioned sports movies</a></p>
+              <p><a href="#">Performer at Club Q before shooting among artists working to save drag</a></p>
+              <p><a href="#">Summer concerts 2024: All the shows you can see, no matter where you are in the world</a></p>
+              <p><a href="#">As Hollywood stares into another cruel summer, it&rsquo;s probably too soon to panic (yet)</a></p>
+            </div>
+            <div class="content-column-3">
+              <figure class="sidepanel-item ad-image">
+                <a href="#"><img src="assets/images/side-ad-1.jpg" alt="" /></a>
+              </figure>
+              <figure class="sidepanel-item">
+                <a href="#"><img src="assets/images/jessica-lange.jpg" alt="Jessica Lange" /></a>
+                <caption><a href="#">Jessica Lange comes full circle as a Broadway lioness in &lsquo;The Great Lillian Hall&rsquo;</a></caption>
+              </figure>
+              <figure class="sidepanel-item">
+                <a href="#"><img src="assets/images/george-clooney.jpg" alt="George Clooney" /></a>
+                <caption><a href="#">George Clooney and Brad Pitt reunite in action-packed &lsquo;Wolfs&rsquo; trailer</a></caption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 'Now Playing' Section -->
+      <section class="middle-content section">
+        <div class="wrapper">
+          <h2>Now playing</h2>
+          <div class="thumbnail-wrapper">
+            <figure class="thumbnail-wrapper-1">
+              <a href="#"><img src="assets/images/jennifer-movie.jpg" alt="Jennifer Lopez Movie" /></a>
+              <caption><a href="#">With &lsquo;Atlas,&rsquo; Jennifer Lopez plus AI robots equals fuel for Netflix&rsquo;s algorithm</a></caption>
+            </figure>
+            <figure class="thumbnail-wrapper-2">
+              <a href="#"><img src="assets/images/wolverine-deadpool.jpg" alt="Wolverine Deadpool" /></a>
+              <caption><a href="#">Summer movie preview 2024: Sequels, some superheroes and more sequels are upon us</a></caption>
+            </figure>
+            <figure class="thumbnail-wrapper-3">
+              <a href="#"><img src="assets/images/furiosa-a-mad-max-saga.jpg" alt="Furiosa A Mad Max Saga" /></a>
+              <caption><a href="#">&lsquo;Furiosa: A Mad Max Saga&rsquo; delivers plenty of action, just not as furiously as its predecessor</a></caption>
+            </figure>
+            <figure class="thumbnail-wrapper-4">
+              <a href="#"><img src="assets/images/benedict-with-monster.jpg" alt="Benedict With Monster" /></a>
+              <caption><a href="#">&lsquo;Eric&rsquo; pulls the right strings as Benedict Cumberbatch&rsquo;s puppeteer seeks his missing son</a></caption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 'In Case You Missed It' Section -->
+      <section class="bottom-content section">
+        <div class="wrapper">
+          <h2>In case you missed it</h2>
+          <div class="content-column-wrapper">
+            <div class="content-column-1">
+              <figure>
+                <a href="#"><img src="assets/images/jean-smart.jpg" alt="Jean Smart" /></a>
+                <caption><a href="#">&lsquo;Hacks&rsquo; pulls back the curtain on ruthlessness as the secret sauce in Hollywood success</a></caption>
+              </figure>
+              <p><a href="#">&lsquo;Baby Reindeer&rsquo; and &lsquo;You&rsquo; tells more than a real-life story. It also has real-life effects</a></p>
+              <p><a href="#">&lsquo;The Beach Boys&rsquo; catches the Boomer wave of golden-oldie music documentaries</a></p>
+              <p><a href="#">Trista Sutter says she&rsquo;s &lsquo;happy and healthy&rsquo; after husband Ryan Sutter&rsquo;s cryptic posts</a></p>
+              <p><a href="#">This sitcom killed off its villain. Now, the show can go anywhere</a></p>
+              <p><a href="#">Why everyone is talking about the &lsquo;She&rsquo;s All That&rsquo;-inspired &lsquo;Bridgerton&rsquo; staircase scene</a></p>
+            </div>
+            <div class="content-column-2">
+              <figure>
+                <a href="#"><img src="assets/images/jim-henson.jpg" alt="Jim Henson" /></a>
+                <caption><a href="#">&lsquo;Jim Henson: Idea Man&rsquo; celebrates the Muppets mastermind without shying away from the hand behind them</a></caption>
+              </figure>
+              <p><a href="#">In &lsquo;Back to Black,&rsquo; Marisa Abela&rsquo;s fierce take on Amy Winehouse is the best reason to go, go, go</a></p>
+              <p><a href="#">&lsquo;The Garfield Movie&rsquo; is more like a stale snack than a fancy feast</a></p>
+              <p><a href="#">&lsquo;IF&rsquo; gets by (but just barely) with a little help from its imaginary friends</a></p>
+              <p><a href="#">&lsquo;The Apprentice&rsquo; premieres to applause and controversy at Cannes Film Festival</a></p>
+              <p><a href="#">Ilana Glazer and Michelle Buteau are both moms. That more than influenced their roles in &lsquo;Babes&rsquo;</a></p>
+            </div>
+            <div class="content-column-3">
+              <figure class="sidepanel-item ad-image">
+                <a href="#"><img src="assets/images/side-ad-2.jpg" alt="" /></a>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="marketing-banner section">
+        <figure class="wrapper ad-image">
+          <a href="#"><img src="assets/images/marketing-banner-ad.jpg" alt="Marketing Banner" /></a>
+        </figure>
+      </aside>
+
+      <section class="brand-content section">
+        <div class="wrapper">
+          <h2>Hand-picked Entertainment Deals on CNN Coupons</h2>
+          <figure class="brands-column">
+            <a href="#"><img src="assets/images/ticketmaster-logo.jpeg" alt="Ticketmaster Logo" /></a>
+            <caption><a href="#">Discover your next concert experience at Ticketmaster</a></caption>
+          </figure>
+          <figure class="brands-column">
+            <a href="#"><img src="assets/images/hulu-logo.jpeg" alt="Hulu Logo" /></a>
+            <caption><a href="#">Hit series and hot movies now streaming on Hulu</a></caption>
+          </figure>
+          <figure class="brands-column">
+            <a href="#"><img src="assets/images/stubhub-logo.jpeg" alt="Stubhub Logo" /></a>
+            <caption><a href="#">Sports, concerts, comedy, and more await you on Stubhub</a></caption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="wrapper">
+        <div class="search-container">
+          <input type="search" placeholder="Search CNN..." />
+          <img class="search-icon" src="assets/icons/search_icon_black.svg" alt="An icon of a magnifying glass depicting search" />
+        </div>
+
+        <section class="footer-row">
+          <div>
+            <h4><a href="#">World</a></h4>
+            <ul>
+              <li><a href="#">Africa</a></li>
+              <li><a href="#">Americas</a></li>
+              <li><a href="#">Asia</a></li>
+              <li><a href="#">China</a></li>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">India</a></li>
+              <li><a href="#">Middle East</a></li>
+              <li><a href="#">United Kingdom</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">US Politics</a></h4>
+            <ul>
+              <li><a href="#">SCOTUS</a></li>
+              <li><a href="#">Congress</a></li>
+              <li><a href="#">Facts First</a></li>
+              <li><a href="#">2024 Elections</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Business</a></h4>
+            <ul>
+              <li><a href="#">Tech</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Calculators</a></li>
+              <li><a href="#">Video</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Markets</a></h4>
+            <ul>
+              <li><a href="#">Pre-markets</a></li>
+              <li><a href="#">After Hours</a></li>
+              <li><a href="#">Fear &amp; greed</a></li>
+              <li><a href="#">Investing</a></li>
+              <li><a href="#">Markets Now</a></li>
+              <li><a href="#">Before the Bell</a></li>
+              <li><a href="#">Nightcap</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Opinion</a></h4>
+            <ul>
+              <li><a href="#">Political Op-Eds</a></li>
+              <li><a href="#">Social Commentary</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Health</a></h4>
+            <ul>
+              <li><a href="#">Life, But Better</a></li>
+              <li><a href="#">Fitness</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Sleep</a></li>
+              <li><a href="#">Mindfulness</a></li>
+              <li><a href="#">Relationships</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Entertainment</a></h4>
+            <ul>
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">Television</a></li>
+              <li><a href="#">Celebrity</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="footer-row">
+          <div>
+            <h4><a href="#">Tech</a></h4>
+            <ul>
+              <li><a href="#">Innovate</a></li>
+              <li><a href="#">Foreseeable Future</a></li>
+              <li><a href="#">Mission:Ahead</a></li>
+              <li><a href="#">Work Transformed</a></li>
+              <li><a href="#">Innovative Cities</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Style</a></h4>
+            <ul>
+              <li><a href="#">Arts</a></li>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Architecture</a></li>
+              <li><a href="#">Luxury</a></li>
+              <li><a href="#">Beauty</a></li>
+              <li><a href="#">Video</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Travel</a></h4>
+            <ul>
+              <li><a href="#">Destinations</a></li>
+              <li><a href="#">Food &amp; Drink</a></li>
+              <li><a href="#">Stay</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Videos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Sports</a></h4>
+            <ul>
+              <li><a href="#">Football</a></li>
+              <li><a href="#">Tennis</a></li>
+              <li><a href="#">Golf</a></li>
+              <li><a href="#">Motorsport</a></li>
+              <li><a href="#">US Sports</a></li>
+              <li><a href="#">Olympics</a></li>
+              <li><a href="#">Climbing</a></li>
+              <li><a href="#">Esports</a></li>
+              <li><a href="#">Hockey</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Watch</a></h4>
+            <ul>
+              <li><a href="#">Live TV</a></li>
+              <li><a href="#">CNN Fast</a></li>
+              <li><a href="#">Shows A-Z</a></li>
+              <li><a href="#">CNN10</a></li>
+              <li><a href="#">CNN Max</a></li>
+              <li><a href="#">CNN TV Schedules</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Listen</a></h4>
+            <ul>
+              <li><a href="#">CNN 5 Things</a></li>
+              <li><a href="#">Chasing Life with Dr. Sanjay Gupta</a></li>
+              <li><a href="#">The Assignment with Audie Cornish</a></li>
+              <li><a href="#">One Thing</a></li>
+              <li><a href="#">Tug of War</a></li>
+              <li><a href="#">CNN Political Briefing</a></li>
+              <li><a href="#">The Axe Files</a></li>
+              <li><a href="#">All There Is with Anderson Cooper</a></li>
+              <li><a href="#">All CNN Audio podcasts</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Science</a></h4>
+            <ul>
+              <li><a href="#">Space</a></li>
+              <li><a href="#">Life</a></li>
+              <li><a href="#">Unearthed</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="footer-row">
+          <div>
+            <h4><a href="#">Climate</a></h4>
+            <ul>
+              <li><a href="#">Solutions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Features</a></h4>
+            <ul>
+              <li><a href="#">As Equals</a></li>
+              <li><a href="#">Call to Earth</a></li>
+              <li><a href="#">Freedom Project</a></li>
+              <li><a href="#">Impact Our World</a></li>
+              <li><a href="#">Inside Africa</a></li>
+              <li><a href="#">CNN Heroes</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Weather</a></h4>
+            <ul>
+              <li><a href="#">Video</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4><a href="#">Ukraine-Russia War</a></h4>
+          </div>
+          <div>
+            <h4><a href="#">Israel-Hamas War</a></h4>
+          </div>
+          <div>
+            <h4><a href="#">About CNN</a></h4>
+            <ul>
+              <li><a href="#">Photos</a></li>
+              <li><a href="#">Investigations</a></li>
+              <li><a href="#">CNN Profiles</a></li>
+              <li><a href="#">CNN Leadership</a></li>
+              <li><a href="#">CNN Newsletters</a></li>
+              <li><a href="#">Work for CNN</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="footer-brand-section">
+          <figure>
+            <a href="#"><img src="assets/icons/CNN_logo.png" alt="An icon representing the logo for CNN" /></a>
+            <span><a href="#">Entertainment</a></span>
+          </figure>
+          <ul class="navbar">
+            <li><a href="#" class="navbar-links">Watch</a></li>
+            <li><a href="#" class="navbar-links">Listen</a></li>
+            <li><a href="#" class="navbar-links">Live TV</a></li>
+            <li>FOLLOW CNN ENTERTAINMENT</li>
+            <li>
+              <a href="#"><img src="assets/icons/facebook_logo.svg" alt="An icon representing the logo for the social media platform Facebook.com" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/icons/x_logo.svg" alt="An icon representing the logo for the social media platform X.com" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="assets/icons/instagram_logo.svg" alt="An icon representing the logo for the social media platform Instagram.com" /></a>
+            </li>
+            <li><button>Sign In</button></li>
+          </ul>
+        </section>
+
+        <section class="footer-legal-section">
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#">Ad Choices</a></li>
+            <li><a href="#">Accessibility &amp; CC</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Newsletters</a></li>
+            <li><a href="#">Transcripts</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-copyright-section">
+          <p>&copy; 2024 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.</p>
+          <p>CNN Sans &trade; &amp; &copy; 2016 Cable News Network.</p>
+        </section>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
